@@ -1,0 +1,444 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"c",
+				"conn\tstatement"
+			],
+			[
+				"con",
+				"connect"
+			],
+			[
+				"in",
+				"info"
+			],
+			[
+				"me",
+				"message\tstatement"
+			],
+			[
+				"it",
+				"item"
+			],
+			[
+				"st",
+				"str\tclass"
+			],
+			[
+				"f",
+				"fh\tstatement"
+			],
+			[
+				"re",
+				"removeHandler\tfunction"
+			],
+			[
+				"de",
+				"debug"
+			],
+			[
+				"le",
+				"level\tparam"
+			],
+			[
+				"wa",
+				"warning\tfunction"
+			],
+			[
+				"log",
+				"logger\tstatement"
+			],
+			[
+				"lo",
+				"logger\tstatement"
+			],
+			[
+				"add",
+				"addHandler\tfunction"
+			],
+			[
+				"se",
+				"setLevel\tfunction"
+			],
+			[
+				"fI",
+				"FileHandler\tclass"
+			],
+			[
+				"WA",
+				"WARNING\tstatement"
+			],
+			[
+				"is",
+				"isdir\tfunction"
+			],
+			[
+				"__",
+				"__file__\tinstance"
+			],
+			[
+				"pa",
+				"path\tmodule"
+			],
+			[
+				"co",
+				"connect"
+			],
+			[
+				"load",
+				"loads\tfunction"
+			],
+			[
+				"ge",
+				"getToken\tfunction"
+			],
+			[
+				"du",
+				"dumps\tfunction"
+			],
+			[
+				"r",
+				"relist\tparam"
+			],
+			[
+				"l",
+				"len_\tstatement"
+			],
+			[
+				"w",
+				"wraps\tfunction"
+			],
+			[
+				"ra",
+				"range\tfunction"
+			],
+			[
+				"bo",
+				"boundary\tstatement"
+			],
+			[
+				"qu",
+				"quicksortHelper\tfunction"
+			],
+			[
+				"p",
+				"pivotLocation\tstatement"
+			],
+			[
+				"m",
+				"my_gen\tfunction"
+			],
+			[
+				"ca",
+				"carry\tstatement"
+			],
+			[
+				"li",
+				"list\tparam"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 71.0,
+		"last_filter": "LiveReload: Enable/disable plugins",
+		"selected_items":
+		[
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"mdp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"LiveReload: Enable/disable plug-ins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 508.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/javaPractice/java-base/java基础.md",
+		"/E/javaPractice/java-base/README.md",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/User/MarkdownLivePreview.css",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/MarkdownEditing/README.md",
+		"/E/javaPractice/java-base/xxx.md",
+		"/C/Users/Yang/AppData/Roaming/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/E/共享文件/java视频/java基础/day05/day05_source/day05笔记.md",
+		"/C/Users/Yang/.ssh/id_rsa.pub",
+		"/E/共享文件/java视频/java基础/day001/day01_source/day01笔记.md",
+		"/E/共享文件/java视频/java基础/day007/day07_source/day07笔记.md",
+		"/E/共享文件/CLASSDATA_ch11_机器学习算法（补充第二章数据/第三章 数据预处理特征工程与模型评价/回归模型的常用评价指标.ipynb",
+		"/E/共享文件/java视频/java基础/day007/day07_code/讲师代码/LoopTest_1.java",
+		"/C/Users/Yang/Desktop/pro07/pro07_lagou.py",
+		"/C/Users/Yang/Desktop/analysis/pro07/pro07_lagou.py",
+		"/E/spyder/practice04_blibli.py",
+		"/E/spyder/0901pro.py",
+		"/E/spyder/pro07_lagou.py",
+		"/E/spyder/0802pro.py",
+		"/E/spyder/0801pro.py",
+		"/E/spyder/0702pro.py",
+		"/E/spyder/0701pro.py",
+		"/E/spyder/pro05.py",
+		"/E/spyder/pro04.py",
+		"/E/spyder/pro03.py",
+		"/E/spyder/pro02.py",
+		"/E/spyder/practice05_selenium.py",
+		"/E/spyder/practice03_connectpymongo.py",
+		"/E/spyder/practice02_douban.py",
+		"/E/spyder/practice01_douban.py",
+		"/C/Users/Yang/Desktop/incident.sql",
+		"/E/crawler/xpath_demo/lxml_demo1.py",
+		"/E/spyder/平安-平安神机项目代码/logs_code.py",
+		"/E/spyder/平安-平安神机项目代码/oracle_client.py",
+		"/E/spider/oracle_client.py",
+		"/C/Users/Yang/Desktop/analysis/14pro/14pro.py",
+		"/C/Users/Yang/Desktop/analysis/pro06/pro06.py",
+		"/E/共享文件/CLASSDATA_ch07数据爬虫技巧_week2（补充了正则）/爬虫练习项目（二）(1)/爬虫练习项目（二）/案例5_blibli弹幕数据采集.py",
+		"/E/spyder/1101pro.py",
+		"/E/spyder/1201pro.py",
+		"/E/spyder/1001pro.py",
+		"/E/mongodb/mongo.config",
+		"/E/mongodb/data/db/mongod.lock",
+		"/E/Django/KYC/front/src/js/add_salesperson.js",
+		"/E/nginx-kyc/conf/nginx.conf",
+		"/C/Users/Yang/Desktop/analysis/07pro/0701pro.py",
+		"/C/Users/Yang/Desktop/考核二代码.py",
+		"/C/Users/Yang/.matplotlib/fontlist-v300.json",
+		"/E/anaconda/Lib/site-packages/matplotlib/mpl-data/matplotlibrc",
+		"/C/Users/Yang/Desktop/analysis/pro04/pro04.py",
+		"/E/Django/practice/change.py",
+		"/C/Users/Yang/Desktop/HealthCheck-output.json",
+		"/C/Users/Yang/Desktop/change.txt",
+		"/C/Users/Yang/Desktop/事件管理/事件管理-2.sql",
+		"/C/Users/Yang/Desktop/事件管理/事件管理-1.sql",
+		"/C/Users/Yang/Documents/Navicat/MySQL/servers/mysql/cp/cp.ned",
+		"/C/Users/Yang/Documents/Navicat/MySQL/servers/mysql/kyc_test/111.sql",
+		"/C/Users/Yang/Desktop/analysis/pro02/pro02.py",
+		"/C/Users/Yang/Desktop/考核项目02_视频网站数据清洗整理和结论研究/考核项目02_视频网站数据清洗整理和结论研究.ipynb",
+		"/C/Users/Yang/Desktop/analysis/10pro/1001pro.py",
+		"/E/spyder/1301pro.py",
+		"/C/Users/Yang/Desktop/analysis/13pro/1301pro.py",
+		"/C/Users/Yang/Desktop/analysis/15pro/15pro.py",
+		"/E/Django/HSP_PROJECT/change/view/change_add.html",
+		"/E/Django/HSP_PROJECT/hspstatic/js/change/index.js",
+		"/E/Django/HSP_PROJECT/hspstatic/js/change/update.js",
+		"/E/Django/HSP_PROJECT/hspstatic/js/change/report.js",
+		"/E/Django/HSP_PROJECT/change/controller/ChangeController.py",
+		"/C/Users/Yang/Desktop/analysis/12pro/1201pro.py",
+		"/C/Users/Yang/Desktop/analysis/12pro/data02_2D_Route_Map/data/data.js",
+		"/C/Users/Yang/Desktop/analysis/12pro/data02_2D_Route_Map/set/settings.js",
+		"/C/Users/Yang/Desktop/analysis/12pro/line (1).json",
+		"/C/Users/Yang/Desktop/analysis/12pro/line.json",
+		"/C/Users/Yang/Desktop/analysis/11pro/1101pro.py",
+		"/C/Users/Yang/Desktop/analysis/09pro/data02_2D_Route_Map/set/settings.js",
+		"/C/Users/Yang/Desktop/analysis/09pro/data02_2D_Route_Map/data/data.js",
+		"/E/Django/incident/apps/incident/urls.py",
+		"/E/Django/incident/front/js/case/case_list.js",
+		"/E/Django/KYC/front/src/js/kycalert.js",
+		"/E/Django/KYC/front/src/js/handle_engineer.js",
+		"/E/Django/incident/apps/incident/views.py",
+		"/E/Django/KYC/front/src/js/add_engineer.js",
+		"/C/Users/Yang/Desktop/analysis/08pro/0802pro.py",
+		"/C/Users/Yang/Desktop/analysis/09pro/data02_3D_Bar_Map/3D_bar_Map_dataread.py",
+		"/C/Users/Yang/Desktop/analysis/09pro/data02_3D_Bar_Map/data/data.js",
+		"/E/spyder/1002pro.py",
+		"/C/Users/Yang/Desktop/event.sql",
+		"/C/Users/Yang/Desktop/analysis/09pro/0901pro.py",
+		"/C/Users/Yang/Desktop/data02_3D_Bar_Map/set/settings.js",
+		"/C/Users/Yang/Desktop/data02_3D_Bar_Map/data/data.js",
+		"/C/Users/Yang/Desktop/data02_3D_Bar_Map/3D_bar_Map_dataread.py",
+		"/C/Users/Yang/Desktop/data02_2D_Route_Map/data/data.js",
+		"/C/Users/Yang/Desktop/data02_2D_Route_Map/set/settings.js",
+		"/C/Users/Yang/Desktop/analysis/09pro/07pro_line_wgs84.json",
+		"/E/共享文件/CLASSDATA_ch05数据表达逻辑：结果输出及内容美化/CH04空间数据可视化/ch0403_空间柱状图/data02_3D_Bar_Map/3D_bar_Map_dataread.py",
+		"/C/Users/Yang/Desktop/analysis/07pro/0702pro.py",
+		"/C/Users/Yang/Desktop/data.pkl",
+		"/E/crawler/lock/condition_threading.py",
+		"/E/scripts/my_gen.py",
+		"/E/spyder/0803.py",
+		"/C/Users/Yang/Desktop/07pro/0701pro.py",
+		"/C/Users/Yang/Desktop/07pro/0702pro.py",
+		"/C/Users/Yang/.spyder-py3/temp.py",
+		"/E/anaconda/etc/jupyter/jupyter_notebook_config.json",
+		"/E/Django/KYC/apps/kycauth/models.py",
+		"/E/nginx-hsp/conf/nginx.conf",
+		"/E/Django/KYC/KYC/settings.py",
+		"/E/Django/KYC/apps/kycauth/views.py",
+		"/E/Django/KYC/apps/kycauth/forms.py",
+		"/E/Django/KYC/apps/kycauth/decorators.py",
+		"/E/Django/KYC/kyc_test.sql",
+		"/E/共享文件/WeChat Files/Antelope1366/Files/kyc_test.sql",
+		"/E/Django/KYC/kyc_test2.sql",
+		"/E/Django/KYC/KYC/urls.py",
+		"/E/Django/KYC/apps/cms/urls.py",
+		"/E/Django/KYC/front/templates/cms/customer.html",
+		"/E/AdminLTE-2.4.3/AdminLTE-2.4.3/dist/css/AdminLTE.css",
+		"/E/Django/KYC/front/templates/cms/base.html",
+		"/E/共享文件/Django实战代码(8月7日)/Django实战代码(8月7日)/xfz/front/templates/cms/news_list.html",
+		"/E/共享文件/Django实战代码(8月7日)/Django实战代码(8月7日)/xfz/apps/news/views.py",
+		"/E/共享文件/Django实战代码(8月7日)/Django实战代码(8月7日)/xfz/apps/cms/views.py",
+		"/E/共享文件/Django实战代码(8月7日)/Django实战代码(8月7日)/xfz/front/src/js/news_category.js",
+		"/E/Django/KYC/front/dist/js/kycalert.min.js",
+		"/E/共享文件/Django实战代码(8月7日)/Django实战代码(8月7日)/xfz/apps/cms/forms.py",
+		"/E/共享文件/Django实战代码(8月7日)/Django实战代码(8月7日)/xfz/apps/cms/course_views.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "java基础.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
