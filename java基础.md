@@ -5,6 +5,7 @@
    * [Java语言特性](#Java语言特性)
       * [1 Java方法的重载](#1-Java方法的重载)
       * [2 ArrayList](#2-ArrayList)
+      * [3 面向对象](#3-面向对象)
    * [编程题](#编程题)
       * [1 水仙花练习功能实现](#1-水仙花练习功能实现)
       * [2 99乘法表](#2-99乘法表)
@@ -142,6 +143,429 @@
       }
     }
     ```
+
+## 3 面向对象
+
+  * 成员变量和局部变量区别
+    - a.定义位置上的区别
+      - 1.成员变量，定义在类中，方法外
+      - 2.局部变量，定义在方法内，语句内({})
+    
+    - b.作用域不同
+      - 1.成员变量，作用于整个类中
+      - 2.局部变量，作用于方法内，语句内
+    
+    - c.默认值不同
+      - 1.成员变量，有自己的默认值
+      - 2.局部变量，没有默认值，且不赋值不能使用
+    
+    - d.内存位置不同
+      - 1.成员变量，跟随对象进入堆内存存储
+      - 2.局部变量，跟随方法，语句进入栈内存
+    
+    - e.生命周期不同
+      - 1.成员变量，跟随对象，在堆中存储，等待JVM清理(生命周期相对较长)
+      - 2.局部变量，跟随方法，方法出栈就消失(生命周期相对较短)
+  
+  * A.面向对象三大特征
+    * 封装、继承、多态
+  * B.封装表现
+    * 1、方法就是一个最基本封装体
+    * 2、类其实也是一个封装体  
+  * C.封装的好处
+    * 1、提高了代码的复用性
+    * 2、隐藏了实现细节，还要对外提供可以访问的方式。便于调用者的使用。这是核心之一，也可以理解为就是封装的概念
+    * 3、提高了安全性   
+  
+    - private概述
+      - private可以修饰成员内容包括成员方法和成员变量，不能修饰局部变量
+      - 被private修饰的内容不能在其他类访问
+    - C.完整代码 
+      ```java
+      class Person {
+        private int age;
+        private String name;
+      
+        public void show() {
+          System.out.println("age=" + age + ",name" + name);
+        }
+      }
+      ```
+
+    * get和set方法
+    * 年龄已被私有，错误的值无法赋值，可是正确的值也赋值不了，这样还是不行，那肿么办呢？按照之前所学习的封装的原理，隐藏后，还需要提供访问方式。只要对外提供可以访问的方法，让其他程序访问这些方法。同时在方法中可以对数据进行验证。
+一般对成员属性的访问动作：赋值(设置 set)，取值(获取 get)，因此对私有的变量访问的方式可以提供对应的 setXxx或者getXxx的方法。
+    class Person {
+      // 私有成员变量
+      private int age;
+      private String name;
+    
+      // 对外提供设置成员变量的方法
+      public void setAge(int a) {
+        // 由于是设置成员变量的值，这里可以加入数据的验证
+        if (a < 0 || a > 130) {
+          System.out.println(a + "不符合年龄的数据范围");
+          return;
+        }
+        age = a; 
+      }
+    
+      // 对外提供访问成员变量的方法
+      public void getAge() {
+        return age;
+      }
+    }
+    * 总结
+      * 类中不需要对外提供的内容都私有化，包括属性和方法。
+以后再描述事物，属性都私有化，并提供setXxx getXxx方法对其进行访问
+    * 注意
+      * 私有仅仅是封装的体现形式而已
+    
+    * 当类中存在成员变量和局部变量同名的时候为了区分，就需要使用this关键字
+      * this关键字：表示哪个对象调用，就是哪个对象
+
+  * 继承
+    *A:继承的概念
+      *a:继承描述的是事物之间的所属关系，通过继承可以使多种事物之间形成一种关系体系
+        *b:在Java中，类的继承是指在一个现有类的基础上去构建一个新的类，
+            构建出来的新类被称作子类，现有类被称作父类
+      *B:继承关系的子类特点  
+        *a:子类会自动拥有父类所有非private修饰的属性和方法
+
+    *C:继承的好处：
+        *1、继承的出现提高了代码的复用性，提高软件开发效率。
+        *2、继承的出现让类与类之间产生了关系，提供了多态的前提。(父类有多个子类继承，从而父类就有了多态)
+
+    *D:继承的注意事项 
+     *a:在Java中，类只支持单继承，不允许多继承，也就是说一个类只能有一个直接父类，例如下面这种情况是不合法的。
+         class A{} 
+         class B{}
+         class C extends A,B{}  // C类不可以同时继承A类和B类
+      假如支持多继承例如:
+      ```java
+         class A{
+          int a=3;
+            public void method(){
+
+            }
+         } 
+         class B{
+          int a=5;
+          public void method(){
+
+          }
+         }
+         class C extends A,B{
+                
+         } 
+         class Demo{
+          public static void main(String[] args){
+            C c=new C();
+            System.out.println(c.a);//到底是调用A的还是B的成员变量??无法确定
+            c.method();//到底是调用A的还是B的成员方法??无法确定
+          } 
+         }
+         ```
+     
+        *b:多个类可以继承一个父类，例如下面这种情况是允许的(就像你爹可以多个儿子,但是这些儿子都只有一个爹)
+         class A{}
+         class B extends A{}
+         class C extends A{}   // 类B和类C都可以继承类A
+    
+       *c:在Java中，多层继承是可以的，
+          即一个类的父类可以再去继承另外的父类，
+          例如C类继承自B类，而B类又可以去继承A类，这时，C类也可称作A类的子类。下面这种情况是允许的。
+         class A{}
+         class B extends A{}   // 类B继承类A，类B是类A的子类
+         class C extends B{}   // 类C继承类B，类C是类B的子类，同时也是类A的子类
+      
+          *d:在Java中，子类和父类是一种相对概念，
+            也就是说一个类是某个类父类的同时，也可以是另一个类的子类。
+            例如上面的这种情况中，B类是A类的子类，同时又是C类的父类。
+
+    *E:继承后子类父类成员变量的特点
+     a:子类的对象调用成员变量的时候,子类自己有,使用子类,子类自己没有调用的父类
+     ```java
+       class Fu{
+        //Fu中的成员变量。
+        int num = 5;
+      }
+      
+      class Zi extends Fu{
+        //Zi中的成员变量
+        int num2 = 6;
+        //Zi中的成员方法
+        public void show()
+        {
+          //访问父类中的num
+          System.out.println("Fu num="+num);
+          //访问子类中的num2
+          System.out.println("Zi num2="+num2);
+        }
+      }
+      
+      class Demo{
+        public static void main(String[] args) 
+        {
+          Zi z = new Zi(); //创建子类对象
+          z.show(); //调用子类中的show方法
+        }
+      }
+      ```
+     b:当子父类中出现了同名成员变量
+     ```java
+    class Fu{
+      //Fu中的成员变量。
+      int num = 5;
+    }
+    
+    class Zi extends Fu{
+      //Zi中的成员变量
+      int num = 6;
+      void show(){   
+        //子类的局部变量
+        int num=7
+        
+        //直接访问,遵循就近查找原则
+                System.out.println(num);//7
+        
+        //子父类中出现了同名的成员变量时
+        //在子类中需要访问父类中非私有成员变量时，需要使用super关键字
+        //访问父类中的num
+        System.out.println("Fu num="+super.num);//5
+        
+
+        //访问子类中的num2
+        System.out.println("Zi num2="+this.num);//6
+      }
+    }
+    
+    class Demo5 {
+      public static void main(String[] args) 
+      {
+        Zi z = new Zi(); //创建子类对象
+        z.show(); //调用子类中的show方法
+      }
+    }
+    ```
+
+    F:继承后子类父类成员方法的特性
+    a:子类的对象调用方法的时候,子类自己有,使用子类,子类自己没有调用的父类
+    ```java
+      class Fu{
+      public void show(){
+        System.out.println("Fu类中的show方法执行");
+      }
+    }
+    class Zi extends Fu{
+      public void show2(){
+        System.out.println("Zi类中的show2方法执行");
+      }
+    }
+    public  class Test{
+      public static void main(String[] args) {
+        Zi z = new Zi();
+        z.show(); //子类中没有show方法，但是可以找到父类方法去执行
+        z.show2();
+      }
+    }
+    ```  
+     
+     b:为什么要有重写?
+     ```java
+         class Fu{
+          public void method(){
+            //上千行代码
+                //Fu类中的方法最先存在,那么如果项目需求变了,该方法
+                //功能不能够满足我们的需求,此时我们也不会去改这个方法
+                //因为项目中可能有大量的功能已经使用到该方法,如果随意修改可能使调用该方法的功能出现问题
+                //所以使用重写方式基于原有功能提供更强的功能
+          }   
+         }
+         class Zi extends Fu{
+          
+         }
+         ```
+     c:子类中出现与父类一模一样的方法时，会出现覆盖操作，也称为override重写、复写或者覆盖。  
+     重载：同一个类中，方法名一样，参数列表不同。
+
+     ```java
+       class Fu{
+      public void show(){
+        System.out.println("Fu show");
+      }
+       }
+     
+     class Zi extends Fu{
+      //子类复写了父类的show方法
+      public void show(){
+        System.out.println("Zi show");
+      }
+    }
+       public  class Test{
+      public static void main(String[] args) {
+        Zi z = new Zi();
+        z.show(); //Zi show 子类有直接使用子类
+      }
+    }
+    ```
+
+    G:方法覆盖的注意事项 
+    a:权限:子类方法覆盖父类方法，必须要保证权限大于等于父类权限。
+      四大权限:public>默认(default,前面不写修饰符)=protected>private
+     
+     class Fu{  
+      void show(){
+
+      }
+      public void method(){
+
+      }
+      }
+      class Zi() extends Fu{
+      public void show(){//编译运行没问题
+
+      }  
+      void method(){//编译错误
+
+        }     
+      }
+   b:方法定义:子类方法和要重写的父类的方法:方法的方法名和参数列表都要一样。
+     关于方法的返回值:
+       如果是基本数据类型,子类的方法和重写的父类的方法返回值类型必须相同
+       如果是引用数据类型,子类的方法和重写的父类的方法返回值类型可以相同或者子类方法的返回值类型是父类方法返回值类型的子类
+       class Fu{  
+      int show(){
+
+      }
+      public Fu method(){
+
+      }
+      
+      public Fu method2(){
+
+      }
+      
+      }
+      class Zi() extends Fu{
+      public int show(){//返回值为基本类型的重写
+
+      }  
+      public Fu method(){//子类的方法和重写的父类的方法返回值类型可以相同
+
+        }     
+        public Zi method2(){//子类方法的返回值类型是父类方法返回值类型的子类
+
+        }     
+      }
+     c:重载与重写对比:
+        重载:
+        权限修饰符(public private 默认):无关
+        方法名:重载的两个方法的方法名必须相同
+        形参列表:
+          形参类型的顺序不同
+          形参的个数不同
+          形参的类型不同
+          三者至少满足一个
+        返回值类型:
+          重载与返回值类型无关
+    重写:
+        权限修饰符(public private 默认): 
+          子类方法的权限>=父类的方法的权限
+        方法名: 
+          子类方法和父类方法必须相同
+        形参列表: 
+           子类方法和父类方法的形参列表必须相同
+        返回值类型:
+          基本类数据类型:
+            必须相同
+          引用数据类型:
+           子类方法的返回值类型和父类方法的返回值类型相同
+           或者
+           子类方法的返回值类型是父类方法的返回值类型的子类
+
+    * 抽象类产生
+      A:抽象类的产生
+        a:分析事物时，发现了共性内容，就出现向上抽取。会有这样一种特殊情况，就是方法功能声明相同，但方法功能主体不同。那么这时也可以抽取，但只抽取方法声明，不抽取方法主体。那么此方法就是一个抽象方法。
+    * 抽象类格式
+      A:抽象方法定义的格式：
+     a:public abstract 返回值类型 方法名(参数);
+       抽象类定义的格式：
+       ```java
+     abstract class 类名 {
+      
+      }
+      b:抽象类示例代码：
+       /*
+       *  定义类开发工程师类
+       *    EE开发工程师 :  工作
+       *    Android开发工程师 : 工作
+       *    
+       *    根据共性进行抽取,然后形成一个父类Develop
+       *    定义方法,工作: 怎么工作,具体干什么呀
+       *    
+       *    抽象类,不能实例化对象, 不能new的
+       *    不能创建对象的原因:  如果真的让你new了, 对象.调用抽象方法,抽象方法没有主体,根本就不能运行
+       *    抽象类使用: 定义类继承抽象类,将抽象方法进行重写,创建子类的对象
+       */
+      public abstract class Develop {
+         //定义方法工作方法,但是怎么工作,说不清楚了,讲不明白
+        //就不说, 方法没有主体的方法,必须使用关键字abstract修饰
+        //抽象的方法,必须存在于抽象的类中,类也必须用abstract修饰
+        public abstract void work();
+      }
+      ```
+    * 使用形式
+      A:抽象类的使用方式
+   /*
+   *  定义类,JavaEE的开发人员
+   *  继承抽象类Develop,重写抽象的方法
+   */
+   ```java
+  public class JavaEE extends Develop{
+    //重写父类的抽象方法
+    //去掉abstract修饰符,加上方法主体
+    public void work(){
+      System.out.println("JavaEE工程师在开发B/S 软件");
+    }
+  }
+
+  /*
+   *  测试抽象类
+   *    创建他的子类的对象,使用子类的对象调用方法
+   */
+  public class Test {
+    public static void main(String[] args) {
+       JavaEE ee = new JavaEE();
+       ee.work();//"JavaEE工程师在开发B/S 软件"
+    }
+  }
+  ```
+    * 抽象类特点
+      A:抽象类的特点
+    a:抽象类和抽象方法都需要被abstract修饰。抽象方法一定要定义在抽象类中。
+    b:抽象类不可以直接创建对象，原因：调用抽象方法没有意义。
+    c:只有覆盖了抽象类中所有的抽象方法后，其子类才可以创建对象。否则该子类还是一个抽象类。
+    之所以继承抽象类，更多的是在思想，是面对共性类型操作会更简单。
+    ```java
+      abstract class A{
+        public abstract void func();
+        public abstract void func2();
+      }
+      class A2 extends A{//A2把A中的两个抽象方法都重写掉了
+                         //A2类不再是抽象类
+         public void func(){}
+         public void func2(){}
+      }
+
+      abstract class A3 extends A{//含有抽象方法的类一定是抽象类
+         public void func(){
+
+         }
+         //public abstract void func2();//func2相当于被继承下来
+      }
+      ```
+
 
 
 # 编程题
